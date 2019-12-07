@@ -9,4 +9,36 @@
     <string name="menu_home">Home</string>
     <string name="menu_imperial_to_si">Imperial to SI</string>
     <string name="menu_si_to_imperial">SI to imperial</string>
+
+    <string name="submit_imperial">Convert to SI</string>
+    <string name="submit_si">Convert to Imperial</string>
+
+    <string-array name="imperial_units_array">
+        <!-- jednostki dlugosci: -->
+        <item>cal</item>
+        <item>stopa</item>
+        <item>jard</item>
+        <item>mila</item>
+        <item>liga</item>
+        <!-- jednostki powierzchni: -->
+        <item>akr</item>
+        <!-- jednostki objętości: -->
+        <item>pinta</item>
+        <item>galon</item>
+        <!-- jednostki masy: -->
+        <item>uncja</item>
+        <item>funt</item>
+    </string-array>
+
+
+    <string-array name="si_units_array">
+        <!-- jednostki dlugosci: -->
+        <item>metr</item>
+        <!-- jednostki powierzchni: -->
+        <item>metr^2</item>
+        <!-- jednostki masy: -->
+        <item>kilogram</item>
+        <!-- jednostki objetosci: -->
+        <item>metr^3</item>
+    </string-array>
 </resources>
