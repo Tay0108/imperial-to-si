@@ -1,16 +1,16 @@
-package com.example.imperial_to_si.ui.gallery;
+package com.example.imperial_to_si.ui.imperialtosi;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class ImperialToSIViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public ImperialToSIViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("Convert Imperial to SI:");
     }
 
     public LiveData<String> getText() {
