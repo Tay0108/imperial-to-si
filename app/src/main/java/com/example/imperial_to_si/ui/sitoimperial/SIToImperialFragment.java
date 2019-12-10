@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -30,6 +33,24 @@ public class SIToImperialFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+
+        final EditText amount = root.findViewById(R.id.si_amount);
+        final Spinner siUnit = root.findViewById(R.id.si_unit);
+        final TextView siResult = root.findViewById(R.id.result_si_to_imperial);
+
+        final Button button = root.findViewById(R.id.submit_si);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+
+                System.out.println("Ilosc jednostki: " + amount.getText() + siUnit.getSelectedItem().toString());
+
+                siResult.setText(amount.getText() + " " + siUnit.getSelectedItem().toString());
+
+            }
+        });
+
         return root;
     }
 }
