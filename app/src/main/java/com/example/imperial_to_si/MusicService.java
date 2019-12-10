@@ -3,6 +3,8 @@ package com.example.imperial_to_si;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Environment;
 import android.os.IBinder;
 import android.provider.Settings;
 
@@ -23,8 +25,9 @@ public class MusicService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         //getting systems default ringtone
-        player = MediaPlayer.create(this,
-                Settings.System.DEFAULT_RINGTONE_URI);
+        System.out.println(Uri.parse("android.resource://"+getPackageName()+"/raw/anthem"));
+        player = MediaPlayer.create(this, Uri.parse("android.resource://"+getPackageName()+"/raw/anthem"));
+
         //setting loop play to true
         //this will make the ringtone continuously playing
         player.setLooping(true);
