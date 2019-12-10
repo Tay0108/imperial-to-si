@@ -13,6 +13,9 @@
     <string name="submit_imperial">Convert to SI</string>
     <string name="submit_si">Convert to Imperial</string>
 
+    <string name="play_music_text">Play music!</string>
+    <string name="stop_music_text">Stop music :(</string>
+
     <string-array name="imperial_units_array">
         <!-- jednostki dlugosci: -->
         <item>cal</item>
