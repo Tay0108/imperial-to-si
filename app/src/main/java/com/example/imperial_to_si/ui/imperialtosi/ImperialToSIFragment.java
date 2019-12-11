@@ -55,7 +55,7 @@ public class ImperialToSIFragment extends Fragment {
                 // String result = String.format("%.23f", siUnit.getValue()) + " " + siUnit.getName();
 
                 // TODO trzeba zwiekszyc lekko wysokosc boxa do wyswietlania wyniku
-                String result = siUnit.getValue() + " " + siUnit.getName();
+                String result =  imperialAmount + " " + unitName + " = " + siUnit.getValue() + " " + siUnit.getName();
                 imperialResult.setText(result);
 
             }
