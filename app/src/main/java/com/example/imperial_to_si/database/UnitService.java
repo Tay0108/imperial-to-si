@@ -19,7 +19,6 @@ public class UnitService {
 
     public UnitService(Context context) {
 
-        // TODO here should not be created new DbHandler because during that new database is being created
         handler = new DbHandler(context);
         database = handler.getReadableDatabase();
     }
