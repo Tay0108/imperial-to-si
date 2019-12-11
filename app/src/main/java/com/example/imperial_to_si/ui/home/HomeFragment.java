@@ -51,6 +51,8 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 System.out.println("music starts");
                 getActivity().startService(new Intent(HomeFragment.this.getActivity(), MusicService.class));
+                buttonStart.setEnabled(false);
+                buttonStop.setEnabled(true);
             }
         });
 
@@ -59,6 +61,8 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 System.out.println("music stops");
                 getActivity().stopService(new Intent(HomeFragment.this.getActivity(), MusicService.class));
+                buttonStart.setEnabled(true);
+                buttonStop.setEnabled(false);
             }
         });
 
