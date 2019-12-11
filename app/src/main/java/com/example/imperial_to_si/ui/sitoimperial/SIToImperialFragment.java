@@ -15,9 +15,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.imperial_to_si.MainActivity;
 import com.example.imperial_to_si.R;
 import com.example.imperial_to_si.database.Unit;
-import com.example.imperial_to_si.database.UnitService;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -51,11 +51,6 @@ public class SIToImperialFragment extends Fragment {
                 String unitName = siUnit.getSelectedItem().toString();
 
                 ImperialUnit imperialUnit = siToImperialUnit(siAmount, unitName);
-
-                // TODO można by ten output sformatować tak żeby ładnie wyglądły liczby np. 1.10000023
-                // String result = String.format("%.23f", siUnit.getValue()) + " " + siUnit.getName();
-
-                // TODO trzeba zwiekszyc lekko wysokosc boxa do wyswietlania wyniku
                 String result = siAmount + " " + unitName + " = " + imperialUnit.getValue() + " " + imperialUnit.getName();
                 siResult.setText(result);
             }
@@ -66,7 +61,7 @@ public class SIToImperialFragment extends Fragment {
 
     private ImperialUnit siToImperialUnit(Double siAmount, String unitName) {
 
-        Unit unit = new UnitService(getContext())
+        Unit unit = MainActivity.getUnitService()
                 .findAllUnits()
                 .stream()
                 .filter(u -> u.getName().equals(unitName))
