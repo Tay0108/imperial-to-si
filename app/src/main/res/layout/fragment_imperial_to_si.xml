@@ -52,8 +52,8 @@
 
     <TextView
         android:id="@+id/result_imperial_to_si"
-        android:layout_width="275dp"
-        android:layout_height="44dp"
+        android:layout_width="276dp"
+        android:layout_height="57dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="268dp"
         android:layout_marginEnd="8dp"
